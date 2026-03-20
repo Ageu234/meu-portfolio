@@ -1218,14 +1218,58 @@ ul {
     margin-top: var(--sp-2);
 }
 
-/* Responsive */
+/* ==========================================================================
+   Master Responsive Rules (Mobile-First / Adaptability)
+   ========================================================================== */
 @media (max-width: 992px) {
+    html { font-size: 15px; } /* Scales down ALL rem units naturally */
     .contact-wrapper { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
-    .section-title { font-size: 2rem; }
-    .about-stats { bottom: -10px; right: 0; left: 0; align-items: center; border-radius: 0 0 16px 16px; flex-direction: row; justify-content: space-around; }
+    html { font-size: 14px; }
+    .section { padding: var(--sp-8) 0; }
+    #about { padding-top: calc(var(--sp-8) + 150px); }
+    .section-title { font-size: 2.2rem; }
+    .section-subtitle { font-size: 1rem; }
+    
+    .about-stats { bottom: -20px; right: 0; left: 0; align-items: center; border-radius: 0 0 16px 16px; flex-direction: row; justify-content: space-around; }
+    .about-image { aspect-ratio: 1; margin: 0 auto; max-width: 350px; }
+    
     .differentials-grid { grid-template-columns: 1fr; }
     .contact-info, .contact-form-container { padding: var(--sp-4); }
+    
+    .skills-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    html { font-size: 13px; }
+    .section { padding: var(--sp-6) 0; }
+    #about { padding-top: calc(var(--sp-6) + 100px); margin-top: -100px; }
+    
+    .hero-title { font-size: 2.8rem; letter-spacing: -1px; }
+    .hero-subtitle { font-size: 1.1rem; }
+    .hero-image-wrapper { max-width: 250px; }
+    .hero-photo-glow { width: 220px; height: 280px; }
+    .hero-floating-badge { font-size: 0.8rem; padding: 6px 12px; bottom: 10px; flex-direction: column; text-align: center;}
+    
+    .nav-list { gap: var(--sp-3); }
+    .nav { padding: var(--sp-4); }
+    
+    .section-title { font-size: 1.8rem; }
+    .stat-value { font-size: 0.85rem; }
+    .stat-title { font-size: 0.65rem; }
+    
+    .timeline { padding-left: 20px; }
+    .timeline-dot { left: -24px; width: 8px; height: 8px; }
+    
+    .project-image-wrapper { height: 180px; }
+    .service-card { padding: var(--sp-4); }
+    
+    .contact-info, .contact-form-container { padding: var(--sp-3); }
+    .form-group input, .form-group textarea { padding: 10px 12px; }
+    
+    .footer-links { flex-direction: column; gap: var(--sp-2); text-align: center; }
 }
